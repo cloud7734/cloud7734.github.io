@@ -5,6 +5,7 @@ body {
     text-align: center;
     background-color: rgb(47, 48, 47);
     box-sizing: border-box;
+    width: 100%;
 }
 
 nav {
@@ -21,7 +22,6 @@ nav {
 
 .nav-list {
     display: flex;
-    align-content: center;
 }
 
 .nav-list li {
@@ -44,22 +44,6 @@ nav {
 .nav-list li:hover a {
     color: black;
     font-weight: 800;
-}
-
-.dropdown {
-    display: inline-block;
-    position: relative;
-    right: 0;
-}
-
-.dropdown-options {
-    display: none;
-    position: absolute;
-    overflow: auto;
-}
-
-.dropdown:hover .dropdown-options {
-    display: block;
 }
 
 .left-align {
@@ -88,26 +72,26 @@ h1 {
 
 h2 {
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #FCE2ED;
     margin-top: 1rem;
     line-height: 5rem;
 }
 
-li,
+section li,
 p {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
-li {
+section li {
     border-bottom: 1px dotted white;
 }
 
@@ -115,7 +99,7 @@ li {
     display: flex;
     flex-flow: row wrap;
     padding: 4.5rem 1rem;
-    margin-top: 4.5rem;
+    margin-top: 2rem;
 }
 
 #skills,
@@ -130,7 +114,7 @@ li {
 }
 
 #contact a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     color: #21EB96;
 }
@@ -138,16 +122,37 @@ li {
 /* for mobile screens only */
 @media only screen and (max-width: 900px) {
     .nav-list {
-        visibility: hidden;
+        display: none;
     }
     nav button {
         background-color: #21EB96;
         position: fixed;
-        top: 2rem;
+        top: 0.75rem;
         right: 2rem;
     }
+    .dropdown {
+        display: inline-block;
+        position: relative;
+    }
+    .dropdown-options {
+        display: none;
+        position: absolute;
+        overflow: auto;
+    }
+    .dropdown:hover .dropdown-options {
+        display: block;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
     #about-me img {
-        width: 100%;
+        width: 90%;
         border: 2px solid #21EB96;
     }
 }
