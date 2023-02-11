@@ -22,7 +22,7 @@ const rollTheDice = () => {
 
     totalResult += Number(modifier);
 
-    document.getElementById("results").innerHTML = "Your total is " + totalResult;
+    document.getElementById("results").innerHTML = "Results: " + totalResult;
 }
 
 const rollOneDie = type => {
