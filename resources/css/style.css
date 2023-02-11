@@ -8,15 +8,15 @@ body {
 
 .section-wrap {
     position: relative;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    margin: 2.5rem auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: 1.5rem auto;
 }
 
 .name-wrap {
     position: relative;
     padding-top: 5rem;
-    padding-bottom: 30rem;
+    padding-bottom: 20rem;
 }
 
 .section-wrap:before {
@@ -114,9 +114,10 @@ h2 {
 #education-content,
 #contact {
     background-color: #2A2E2CBB;
-    padding: 1rem 0;
     margin: 1rem auto;
     max-width: 800px;
+    line-height: 2rem;
+    border: 1px solid white;
 }
 
 h3 {
