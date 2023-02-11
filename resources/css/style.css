@@ -1,116 +1,92 @@
 body {
-    color: #E0EBE3;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 16px;
+    font-family: 'Kanit', sans-serif;
+    background-color: #E2F0E2;
     text-align: center;
-    background-color: rgb(47, 48, 47);
-    box-sizing: border-box;
-    width: 100%;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    background-color: rgba(0,0,0,0.5);
-    position: fixed;
+.name-wrap {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 40rem;
+}
+
+.name-wrap:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
     top: 0;
     width: 100%;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
+    height: 100%;
+    opacity: 0.8;
+    filter: brightness(40%);
+    background-image: url(../images/Main_Header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.nav-list {
-    display: flex;
+/* for mobile screens only */
+@media only screen and (max-width: 900px) {
+    .name-wrap:before {
+        background-position: 50% 0;
+    }
 }
 
-.nav-list li {
-    border-left: 0.5px dashed #21EB96;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-decoration: underline;
+/* for desktop screens only */
+@media only screen and (min-width: 900px) {
+    .name-wrap:before {
+        background-position: center;
+    }
 }
 
-.nav-list li a {
-    color: #E0EBE3;
-    font-weight: 800;
+.name-content {
+    position: relative;
 }
 
-.nav-list li:hover {
-    background-color: #21EB96;
-    transition-duration: 0.5s;
+.name-wrap h1 {
+    font-family: 'Kaushan Script', cursive;
 }
 
-.nav-list li:hover a {
-    color: black;
-    font-weight: 800;
+#profile-photo img {
+    max-width: 300px;
+    padding: 1rem 0;
 }
 
-.left-align {
-    text-align: left;
-    padding-left: 1rem;
-}
-
-.right-align {
-    text-align: right;
-    padding-right: 1rem;
-}
-
-.highlight {
-    color: #21EB96;
-    font-weight: 800;
+#section-header-photo img {
+    max-width: 100%;
+    padding: 1rem 0;
 }
 
 h1 {
     font-weight: 800;
-    font-size: 2.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
+    font-size: clamp(2.5rem, 10vw, 6rem);
     color: #21EB96;
+}
+
+h1 sub {
+    font-size: clamp(1rem, 5vw, 3rem);
 }
 
 h2 {
     font-weight: 700;
-    font-size: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    font-size: clamp(1.5rem, 10vw, 3.5rem);
+    color: white;
+    line-height: 3rem;
 }
 
 h3 {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #FCE2ED;
-    margin-top: 1rem;
-    line-height: 5rem;
 }
 
 section li,
 p {
     font-size: 1rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 section li {
-    border-bottom: 1px dotted white;
-}
-
-#about-me {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 4.5rem 1rem;
-    margin-top: 2rem;
-}
-
-#skills,
-#education,
-#work-experience,
-#personal-life,
-#contact {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 4.5rem 1rem;
-    border-top: 2px solid white;
+    border-top: 1px dotted black;
 }
 
 #contact a {
@@ -121,45 +97,8 @@ section li {
 
 /* for mobile screens only */
 @media only screen and (max-width: 900px) {
-    .nav-list {
-        display: none;
-    }
-    nav button {
-        background-color: #21EB96;
-        position: fixed;
-        top: 0.75rem;
-        right: 2rem;
-    }
-    .dropdown {
-        display: inline-block;
-        position: relative;
-    }
-    .dropdown-options {
-        display: none;
-        position: absolute;
-        overflow: auto;
-    }
-    .dropdown:hover .dropdown-options {
-        display: block;
-    }
-    h1 {
-        font-size: 2.5rem;
-    }
-    h2 {
-        font-size: 2rem;
-    }
-    h3 {
-        font-size: 1.5rem;
-    }
-    #about-me img {
-        width: 90%;
-        border: 2px solid #21EB96;
-    }
 }
 
 /* for desktop screens only */
 @media only screen and (min-width: 900px) {
-    .dropdown {
-        visibility: hidden;
-    }
 }
