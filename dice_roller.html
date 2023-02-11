@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./resources/scripts/diceRoller.js"></script>
+    <title>Dice Roller</title>
+</head>
+<body>
+    <h1>Dice Roller</h1>
+    <p>Choose how many and what type of polyhedral dice to roll. Add a modifier if you wish. Click ROLL!</p>
+    <form action="" method="GET">
+        <label for="quantity">Quantity of Dice:</label>
+        <input type="number" name="quantity" id="quantity" step="1" min="1" default="1" required>
+        <br>
+        <label for="typeOfDice">Type of Dice:</label>
+        <select id="typeOfDice" name="typeOfDice">
+            <option value="d2">d2 (2-sided)</option>
+            <option value="d4">d4 (4-sided)</option>
+            <option value="d6">d6 (6-sided)</option>
+            <option value="d8">d8 (8-sided)</option>
+            <option value="d10">d10 (10-sided)</option>
+            <option value="d12">d12 (12-sided)</option>
+            <option value="d20">d20 (20-sided)</option>
+            <option value="d100">d100 (100-sided)</option>
+        </select>
+        <br>
+        <label for="modifier">Modifier (optional)</label>
+        <input type="number" name="modifier" id="modifier" step="1" default="1">
+        <br>
+        <button type="button" onClick="rollTheDice()">ROLL!</button>
+    </form>
+    <br>
+    <h2 id="results"></h2>
+</body>
+</html>
